@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 class Card:
     def __init__(self, winners: list[int], entries: list[int]) -> None:
         self.winning_numbers = winners
