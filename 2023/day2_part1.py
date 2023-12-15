@@ -7,7 +7,7 @@ class Round:
     """
     Stores the number of red, green, and blue balls that were present in one
     round of the game.
-    
+
     A round `r_1` is less than another round `r_2` if the number of red, blue,
     and green balls in `r_1` is less than or equal to the number of red, blue,
     and green balls in `r_2`.
@@ -29,7 +29,7 @@ class Round:
 class Game:
     """
     Stores the list of rounds that happened in the game.
-    
+
     A game `g` is less than a round `r` if the number of red, blue, and green
     balls in each round `g_r` of game `g` is less than or equal to the number
     of red, blue, and green balls in `r`.
