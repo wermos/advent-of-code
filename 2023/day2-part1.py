@@ -4,6 +4,14 @@ NUM_BLUE = 14
 
 
 class Round:
+    """
+    Stores the number of red, green, and blue balls that were present in one
+    round of the game.
+    
+    A round `r_1` is less than another round `r_2` if the number of red, blue,
+    and green balls in `r_1` is less than or equal to the number of red, blue,
+    and green balls in `r_2`.
+    """
     def __init__(self, red: int, blue: int, green: int):
         self.red: int = red
         self.green: int = green
@@ -19,6 +27,13 @@ class Round:
         return f"Red: {self.red}, Green: {self.green}, Blue: {self.blue}"
 
 class Game:
+    """
+    Stores the list of rounds that happened in the game.
+    
+    A game `g` is less than a round `r` if the number of red, blue, and green
+    balls in each round `g_r` of game `g` is less than or equal to the number
+    of red, blue, and green balls in `r`.
+    """
     def __init__(self, game_id) -> None:
         self.game_id: int = game_id
         self.round_list: list[Round] = list()
@@ -37,6 +52,10 @@ class Game:
 
 
 def round_parser(line: str) -> Round:
+    """
+    Parses each individual round of a game and returns the result in a `Round`
+    object.
+    """
     data = line.split(",")
 
     red = 0
@@ -76,7 +95,7 @@ def game_parser(line: str) -> Game:
     return game
 
 def input_parser(path: str) -> list[Game]:
-    """Parses the input text file."""
+    """Parses the entire input text file."""
 
     game_list = list()
 
@@ -95,6 +114,9 @@ if __name__ == "__main__":
     id_total = 0
 
     for game in game_list:
+        # We simply check if each round in `game` is less than or equal to the
+        # `reference_round`, and if it, we add its game ID to the running total
+        # of the game IDs.
         if game <= reference_round:
             id_total += game.game_id
 
