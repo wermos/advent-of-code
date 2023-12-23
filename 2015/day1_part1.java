@@ -1,9 +1,10 @@
-import java.nio.files.*;
+import java.nio.file.*;
+import java.nio.charset.StandardCharsets;
 import java.io.*;
 
 class Day1 {
-	public static void main(String[] args) {
-		Path p = FileSystems.getDefault().getPath("day1.txt.");
+	public static void main(String[] args) throws IOException {
+		Path p = FileSystems.getDefault().getPath("inputs/day1.txt");
 		BufferedReader reader = Files.newBufferedReader(p, StandardCharsets.US_ASCII);
 
 		String line = "";
