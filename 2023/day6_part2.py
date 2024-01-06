@@ -36,7 +36,20 @@ def calculate_ways_fast(ins: Instance) -> int:
     # I don't need to do anything special with the return type.
     return answer
 
+def calculate_ways_extension(ins: Instance) -> int:
+    time = ins.time
+    distance = ins.distance
+    
+    import sys
+    sys.path.append("./modules/")
+    import helper
+    
+    answer = helper.calculate_ways_native(time, distance)
+    return answer
+
 if __name__ == "__main__":
     instance = read_input("inputs/day6-part2.txt")
 
-    print(calculate_ways_fast(instance))
+    # print(calculate_ways(instance))
+    # print(calculate_ways_fast(instance))
+    print(calculate_ways_extension(instance))
