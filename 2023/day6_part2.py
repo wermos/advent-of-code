@@ -44,7 +44,7 @@ def calculate_ways_extension(ins: Instance) -> int:
     sys.path.append("./modules/")
     import helper
     
-    answer = helper.calculate_ways_native(time, distance)
+    answer = helper.calculate_ways(time, distance)
     return answer
 
 if __name__ == "__main__":

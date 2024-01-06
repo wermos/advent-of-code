@@ -19,15 +19,15 @@ static PyObject * calculate_ways_extension(PyObject *self, PyObject *args) {
 }
 
 static PyMethodDef HelperMethods[] = {
-    {"calculate_ways_native", calculate_ways_extension, METH_VARARGS,
+    {"calculate_ways", calculate_ways_extension, METH_VARARGS,
     "Calculate the number of ways as defined in Day 6 Part 2, using a C++ extension."},
-    {NULL, NULL, 0, NULL}        /* Sentinel */
+    {NULL, NULL, 0, NULL} /* Sentinel */
 };
 
 static struct PyModuleDef helpermodule = {
     PyModuleDef_HEAD_INIT,
-    "helper",   /* name of module */
-    NULL, /* module documentation, may be NULL */
+    "helper", /* name of module */
+    NULL,     /* module documentation, may be NULL */
     -1,       /* size of per-interpreter state of the module,
                  or -1 if the module keeps state in global variables. */
     HelperMethods
