@@ -98,9 +98,9 @@ For this problem, I first wrote a pure Python solution, which took around 4 seco
 
 4 seconds felt like an unacceptably long amount of time, especially because the problem boiled down to checking the interval for which a certain parabola is less than 0. This is a task that can be done with pen and paper relatively easily, though it would be boring and have messy calculations in this case.
 
-My machine-friendly alternative was to create a range of numbers as a list (or array): $\{ 1, 2, \dots, t_{\text{max}} \}$. Applying an objective function (called $f$ here for simplicity) to each one to arrive at a new list/array $\{ f(1), f(2), \dots, f(t_{\text{max}}) \}$, and then counting how many of those elements are above a certain threshold $d$.
+##### The Algorithm
 
-
+My machine-friendly alternative was to create a range of numbers as a list (or array): $`\{ 1, 2, \dots, t_{\text{max}} \}`$. Applying an objective function (called $f$ here for simplicity) to each one to arrive at a new list/array $`\{ f(1), f(2), \dots, f(t_{\text{max}}) \}`$, and then counting how many of those elements are above a certain threshold $d$.
 
 ### Java
 
