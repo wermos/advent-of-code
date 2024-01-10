@@ -27,11 +27,17 @@ where `X` is the day number like before, and `Y` is either `1` or `2`, depending
 
 The format for the solutions is very straightforward: Each program is named `dayX_partY.ext`, where, like before, `X` is the day number, `Y` is the part number (so either `1` or `2`), and `.ext` is the usual source file extension used for that program.
 
-So, since I'm doing all the [2015 problems](https://adventofcode.com/2015) in Java, `.ext` is `.java`. On the other hand, since [2023](https://adventofcode.com/2023) is in Python, `.ext` for 2023 is `.py`.
+So, since I'm doing all the [2015 problems](https://adventofcode.com/2015) in Java, `.ext` is `.java` in the `2015/` directory. On the other hand, since [2023](https://adventofcode.com/2023) is in Python, `.ext` for 2023 is `.py`.
 
-The repo originally used hyphens as delimiters between the different parts of the program file names. I had to change the 2023 program file names to underscores, because hyphens were being interpreted as minus signs by the Python Interpreter, and this was preventing me from importing 
+#### Underscores as Filename Delimiters
 
-Here is what the repo structure looks like, [at the time of writing](https://github.com/wermos/advent-of-code/tree/adbb58772390c8fe9b2bc42e9512da871a233db1):
+The repo originally used hyphens as delimiters between the different parts of the program file names. I had to change the 2023 program file names to underscores, because hyphens were being interpreted as minus signs by the Python Interpreter, and this was preventing me from importing other source files as modules. For example, if I wanted to use the Part 1 scaffolding for Part 2, I was unable to do so.
+
+For this reason, I changed all the filename delimiters to underscores over the [course](https://github.com/wermos/advent-of-code/commit/c2c1a665f577e1d8ec5516d3b67ac351c58ce41b) [of](https://github.com/wermos/advent-of-code/commit/152855e6d0cc3a2a39dea5f4431453a8ee8509e8) [four](https://github.com/wermos/advent-of-code/commit/874866a578a31422a96faf7d50c85723307e16b4) [commits](https://github.com/wermos/advent-of-code/commit/adbb58772390c8fe9b2bc42e9512da871a233db1).
+
+[At the time of writing](https://github.com/wermos/advent-of-code/tree/869dcace4cc25d09ca49dcb1b9ab36a981b039d0), Part 1 code was used in the Part 2 solution for [Day 2](https://github.com/wermos/advent-of-code/blob/869dcace4cc25d09ca49dcb1b9ab36a981b039d0/2023/day2_part2.py#L1) and [Day 6](https://github.com/wermos/advent-of-code/blob/869dcace4cc25d09ca49dcb1b9ab36a981b039d0/2023/day6_part2.py#L5) of 2023.
+
+Here is what the repo structure looks like, [at the time of writing](https://github.com/wermos/advent-of-code/tree/5be1a79b2c7ebe7b17b2a07c2df2fa7382ebac12):
 
 ```html
 advent-of-code/
@@ -53,6 +59,17 @@ advent-of-code/
 │  ├─ inputs/
 │  │  ├─ day1.txt
 │  │ ⋮
+│  ├─ src/
+│  │  ├─ day6_part2_helper.hpp
+│  │  ├─ day6_part2_helper_alt.cpp
+│  │  ├─ day6_part2_helper.cpp
+│  │ ⋮
+│  ├─ modules/
+│  │  ├─ helper.so
+│  │  ├─ libday6_part2_helper.so
+│  │ ⋮
+│  ├─ CMakeLists.txt
+│  ├─ __init__.py
 │  ├─ day1_part1.py
 │  ├─ day1_part2.py
   ⋮
@@ -67,14 +84,6 @@ There are many holes, and entire years are currently missing, but those will (ho
 
 TODO: Write some introductory text.
 
-### Java
-
-TODO: Fill this section in.
-
-### C++
-
-TODO: Fill this section in.
-
 ### Python
 
 TODO: Fill this section in.
@@ -83,6 +92,20 @@ TODO: Fill this section in.
 
 #### 2023 Day 6, Part 2
 
+##### Motivation
+
 For this problem, I first wrote a pure Python solution, which took around 4 seconds to run on my machine. This solution can be found in the [`calculate_ways`](https://github.com/wermos/advent-of-code/blob/adbb58772390c8fe9b2bc42e9512da871a233db1/2023/day6_part2.py#L13-L21) function.
 
-TODO: Finish filling this section in.
+4 seconds felt like an unacceptably long amount of time, especially because the problem boiled down to checking the interval for which a certain parabola is less than 0. This is a task that can be done with pen and paper relatively easily, though it would be boring and have messy calculations in this case.
+
+My machine-friendly alternative was to create a range of numbers as a list (or array): $\{ 1, 2, \dots, t_{\text{max}} \}$. Applying an objective function (called $f$ here for simplicity) to each one to arrive at a new list/array $\{ f(1), f(2), \dots, f(t_{\text{max}}) \}$, and then counting how many of those elements are above a certain threshold $d$.
+
+
+
+### Java
+
+TODO: Fill this section in.
+
+### C++
+
+TODO: Fill this section in.
