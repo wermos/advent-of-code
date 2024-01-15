@@ -72,7 +72,8 @@ def process(hailstone1: Hailstone, hailstone2: Hailstone,
         d_x = p1_x - p2_x
         d_y = p1_y - p2_y
 
-        # Using Cramer's Rule on the simultaneous equations
+        # Using Cramer's Rule on the simultaneous equations.
+        #
         # We need to calculate both t1 and t2 to ensure that both are
         # nonnegative.
         t2 = (-d_x * v1_y + d_y * v1_x) / denom
