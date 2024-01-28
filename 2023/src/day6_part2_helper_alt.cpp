@@ -2,7 +2,6 @@
 #include <Python.h>
 
 #include <cstdint>
-#include <ranges>
 
 #include "day6_part2_helper.hpp"
 
