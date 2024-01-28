@@ -9,7 +9,7 @@ int calculate_points(char opponent_move, char my_move) {
      *  'Y' is for Paper, and
      *  'Z' is for Scissors.
      *
-     * Similarlyk, in `opponent_move`,
+     * Similarly, in `opponent_move`,
      *  'A' is for Rock,
      *  'B' is for Paper, and
      *  'C' is for Scissors.
