@@ -1,5 +1,5 @@
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <string>
 
 int main() {
@@ -26,8 +26,8 @@ int main() {
 
     // We need to process the last sum also.
     if (running_sum > highest) {
-                highest = running_sum;
-            }
+        highest = running_sum;
+    }
 
     std::cout << highest << std::endl;
 }

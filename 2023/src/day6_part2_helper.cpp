@@ -1,9 +1,8 @@
-#include <cstdint>
-#include <ranges>
-
-#include <iostream>
-
 #include "day6_part2_helper.hpp"
+
+#include <cstdint>
+#include <iostream>
+#include <ranges>
 
 extern "C" int calculate_ways(std::uint64_t t_max, std::uint64_t distance) {
     return calculate_ways_impl(t_max, distance);
@@ -19,7 +18,7 @@ int calculate_ways_loop(std::uint64_t t_max, std::uint64_t distance) {
             count++;
         }
     }
-    
+
     return count;
 }
 

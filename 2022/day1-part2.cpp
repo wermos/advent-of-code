@@ -1,5 +1,5 @@
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <string>
 
 struct Top3 {
@@ -22,9 +22,7 @@ struct Top3 {
         }
     }
 
-    int sum() {
-        return a + b + c;
-    }
+    int sum() { return a + b + c; }
 };
 
 int main() {
