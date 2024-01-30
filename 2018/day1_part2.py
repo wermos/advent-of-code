@@ -1,4 +1,4 @@
-with open("day1.txt", 'r') as f:
+with open("inputs/day1.txt", 'r') as f:
     total = 0
     list_of_totals_seen = [0]
     duplicate_found = False
@@ -11,5 +11,6 @@ with open("day1.txt", 'r') as f:
             if total in list_of_totals_seen:
                 print(total)
                 duplicate_found = True
+                break
             else:
                 list_of_totals_seen.append(total)
