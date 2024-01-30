@@ -35,9 +35,9 @@ The repo originally used hyphens as delimiters between the different parts of th
 
 For this reason, I changed all the filename delimiters to underscores over the [course](https://github.com/wermos/advent-of-code/commit/c2c1a665f577e1d8ec5516d3b67ac351c58ce41b) [of](https://github.com/wermos/advent-of-code/commit/152855e6d0cc3a2a39dea5f4431453a8ee8509e8) [four](https://github.com/wermos/advent-of-code/commit/874866a578a31422a96faf7d50c85723307e16b4) [commits](https://github.com/wermos/advent-of-code/commit/adbb58772390c8fe9b2bc42e9512da871a233db1).
 
-[At the time of writing](https://github.com/wermos/advent-of-code/tree/869dcace4cc25d09ca49dcb1b9ab36a981b039d0), Part 1 code was used in the Part 2 solution for [Day 2](https://github.com/wermos/advent-of-code/blob/869dcace4cc25d09ca49dcb1b9ab36a981b039d0/2023/day2_part2.py#L1) and [Day 6](https://github.com/wermos/advent-of-code/blob/869dcace4cc25d09ca49dcb1b9ab36a981b039d0/2023/day6_part2.py#L5) of 2023.
+[At the time of writing (this subsection)](https://github.com/wermos/advent-of-code/tree/869dcace4cc25d09ca49dcb1b9ab36a981b039d0), Part 1 code was used in the Part 2 solution for [Day 2](https://github.com/wermos/advent-of-code/blob/869dcace4cc25d09ca49dcb1b9ab36a981b039d0/2023/day2_part2.py#L1) and [Day 6](https://github.com/wermos/advent-of-code/blob/869dcace4cc25d09ca49dcb1b9ab36a981b039d0/2023/day6_part2.py#L5) of 2023.
 
-Here is what the repo structure looks like, [at the time of writing](https://github.com/wermos/advent-of-code/tree/5be1a79b2c7ebe7b17b2a07c2df2fa7382ebac12):
+Here is what the repo structure looks like, [at the time of writing (this subsection)](https://github.com/wermos/advent-of-code/tree/5be1a79b2c7ebe7b17b2a07c2df2fa7382ebac12):
 
 ```html
 advent-of-code/
@@ -82,30 +82,60 @@ There are many holes, and entire years are currently missing, but those will (ho
 
 ## Language Requirements
 
-TODO: Write some introductory text.
+Since there are multiple languages used in the repository, it makes sense to talk about the version(s) with which the code has been tested, and the version(s) with which the code was run.
 
 ### Python
 
-TODO: Fill this section in.
-
-### Special Cases
-
-#### 2023 Day 6, Part 2
-
-##### Motivation
-
-For this problem, I first wrote a pure Python solution, which took around 4 seconds to run on my machine. This solution can be found in the [`calculate_ways`](https://github.com/wermos/advent-of-code/blob/adbb58772390c8fe9b2bc42e9512da871a233db1/2023/day6_part2.py#L13-L21) function.
-
-4 seconds felt like an unacceptably long amount of time, especially because the problem boiled down to checking the interval for which a certain parabola is less than 0. This is a task that can be done with pen and paper relatively easily, though it would be boring and have messy calculations in this case.
-
-##### The Algorithm
-
-My machine-friendly alternative was to create a range of numbers as a list (or array): $`\{ 1, 2, \dots, t_{\text{max}} \}`$. Applying an objective function (called $f$ here for simplicity) to each one to arrive at a new list/array $`\{ f(1), f(2), \dots, f(t_{\text{max}}) \}`$, and then counting how many of those elements are above a certain threshold $d$.
+Most of the Python solutions should work even with an older Python version like 3.9. That being said, the only guarantee I can give is for Python 3.11 onwards, since that is the version I used to run my Python code.
 
 ### Java
 
-TODO: Fill this section in.
+[At the time of writing this subsection](https://github.com/wermos/advent-of-code/tree/c0c594b6020cb0262f2964596482c926b130938b), the only Java code in the repository is the Day 1 Parts 1 and 2 solution for 2015. I ran the code using [Java 22 Early Access](https://jdk.java.net/22/). That being said, it _should_ work on any Java version 8 onwards.
 
 ### C++
 
-TODO: Fill this section in.
+For best results, the code should be compiled for C++20 or later. All the C++ code currently in the repository works with C++20 and above, though at some point I might end up using a C++23-only construct, at which point I would have to upgrade the C++ version requirement accordingly.
+
+## Running The Programs
+
+One important thing to note is that the working directory is assumed to be the directory in which the program file resides. So, if we want to run 2023's Day 4 Part 2 solution, we would run `python day4_part2.py` from inside the `2023/` directory.
+
+Apart from that, the only other important things to note is that there is a CMake script to help build the C++ libraries required for the alternative 2023 Day 6 Part 2 solutions. To use those, run
+
+```bash
+cmake -S. -Bmodules
+```
+
+with the `2023/` as your current working direcotry, and then run
+
+```bash
+cmake --build modules
+```
+
+After that, you should be able to run `python day6_part2.py` without any issues.
+
+## Special Cases
+
+This section deals with certain special cases where more work was done than one would expect, or where things were done differently than one would expect. In each case, I discuss why more work was required, and what exactly I did.
+
+### 2015 Day 1
+
+Originally, the 2015 Day 1 Part 1 solution was the thing which started the whole repository. However, when I was going back and checking old years on the Advent of Code website, I realized that my 2015 Day 1 was not finished. I realized then that I must have used a different account to do it.
+
+Since I already had the code, I decided to run it on the input file that was already in the repo, which didn't work because the input is different for each user. Once I redownloaded the input, and reran the program, I got the required answer.
+
+After reading Part 2 of Day 1, I decided it was so simple that I might as well finish it, which is why I added `2015/day1_part2.java`.
+
+For this reason, even though the Day 1 Part 1 file was originally added in [41420bd](https://github.com/wermos/advent-of-code/tree/41420bd4e71bef81f30d2f98c6270ee1f27f28fd), it had to be redone in [f2be2fc](https://github.com/wermos/advent-of-code/commit/f2be2fc14d133e6cda5b5aebe336a6f984290fb6).
+
+### 2023 Day 6, Part 2
+
+#### Motivation
+
+For this problem, I first wrote a pure Python solution, which took around 4 seconds to run on my machine. This solution can be found in the [`calculate_ways`](https://github.com/wermos/advent-of-code/blob/adbb58772390c8fe9b2bc42e9512da871a233db1/2023/day6_part2.py#L13-L21) function.
+
+4 seconds felt like an unacceptably long amount of time, especially because the problem boiled down to finding the interval for which a certain parabola is less than 0. This is a task that can be done with pen and paper relatively easily, though it would be boring and have messy calculations in this case.
+
+#### The Algorithm
+
+My machine-friendly alternative was to create a range of numbers as a list (or array): $`\{ 1, 2, \dots, t_{\text{max}} \}`$. Applying an objective function (called $f$ here for simplicity) to each one to arrive at a new list/array $`\{ f(1), f(2), \dots, f(t_{\text{max}}) \}`$, and then counting how many of those elements are above a certain threshold $d$.
