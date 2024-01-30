@@ -8,6 +8,26 @@ In its final form, I want the repo to store the complete solution to every Adven
 
 TODO: Add more info.
 
+### Progress
+
+In order to be able to easily see the progress that I have made so far, I added a few banners below, which show the progress that has been made according to a couple of different metrics.
+
+#### Overall
+
+![Progress Bar to show how much progress has been made](https://progress-bar.dev/4/?title=Progress)
+
+#### By Year
+
+![Progress Bar to show how much progress has been made in the 2015 problems](https://progress-bar.dev/4/?title=2015)
+![Progress Bar to show how much progress has been made in the 2016 problems](https://progress-bar.dev/0/?title=2016)
+![Progress Bar to show how much progress has been made in the 2017 problems](https://progress-bar.dev/0/?title=2017)
+![Progress Bar to show how much progress has been made in the 2018 problems](https://progress-bar.dev/4/?title=2018)
+![Progress Bar to show how much progress has been made in the 2019 problems](https://progress-bar.dev/0/?title=2019)
+![Progress Bar to show how much progress has been made in the 2020 problems](https://progress-bar.dev/0/?title=2020)
+![Progress Bar to show how much progress has been made in the 2021 problems](https://progress-bar.dev/0/?title=2021)
+![Progress Bar to show how much progress has been made in the 2022 problems](https://progress-bar.dev/8/?title=2022)
+![Progress Bar to show how much progress has been made in the 2023 problems](https://progress-bar.dev/22/?title=2023)
+
 ## Repository Structure
 
 The repository structure is quite simple. Assuming that `advent-of-code` is the top-level directory, it has a directory for each year.
@@ -106,7 +126,7 @@ Apart from that, the only other important things to note is that there is a CMak
 cmake -S. -Bmodules
 ```
 
-with the `2023/` as your current working direcotry, and then run
+with the `2023/` as your current working directory, and then run
 
 ```bash
 cmake --build modules
@@ -116,7 +136,7 @@ After that, you should be able to run `python day6_part2.py` without any issues.
 
 ## Special Cases
 
-This section deals with certain special cases where more work was done than one would expect, or where things were done differently than one would expect. In each case, I discuss why more work was required, and what exactly I did.
+This section deals with certain special cases where more work was done than one would expect, or where things were done differently than one would expect. In each case, I discuss why it was required, and what exactly I did.
 
 ### 2015 Day 1
 
@@ -127,6 +147,10 @@ Since I already had the code, I decided to run it on the input file that was alr
 After reading Part 2 of Day 1, I decided it was so simple that I might as well finish it, which is why I added `2015/day1_part2.java`.
 
 For this reason, even though the Day 1 Part 1 file was originally added in [41420bd](https://github.com/wermos/advent-of-code/tree/41420bd4e71bef81f30d2f98c6270ee1f27f28fd), it had to be redone in [f2be2fc](https://github.com/wermos/advent-of-code/commit/f2be2fc14d133e6cda5b5aebe336a6f984290fb6).
+
+### 2018 Day 1
+
+A similar case as the one above. I redownloaded the input files and reran the programs.
 
 ### 2023 Day 6, Part 2
 
