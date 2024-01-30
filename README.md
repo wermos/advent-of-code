@@ -6,7 +6,14 @@ This repo stores all the Advent of Code solutions that I have written.
 
 In its final form, I want the repo to store the complete solution to every Advent of Code problem.
 
-TODO: Add more info.
+Apart from that, another goal is to learn things while doing these problems. One way I've ensured that this goal will be met, to some extent at least, is by forcing myself to do each year in a different programming language. So far, the languages I've decided are
+
+- 2015 will be in Java.
+- 2018 will be in Rust. (Day 1 will have to be redone.)
+- 2022 will be in C++.
+- 2023 will be in Python.
+
+The remaining years are, as of now, undecided.
 
 ### Progress
 
