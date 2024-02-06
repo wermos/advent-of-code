@@ -114,7 +114,7 @@ def main():
     # Run clang-format on .cpp and .hpp files
     target_directories = ['2022', '2023/src']
     formatted_files = run_clang_format(root_directory, ['.cpp', '.hpp'], target_directories)
-    commit_formatted_files(formatted_files, "Formatted the files using `clang-format`.")
+    commit_formatted_files(formatted_files, r"Formatted the files using \`clang-format\`.")
 
     # Calculate and print the overall progress
     overall_progress = calculate_overall_progress(year_progress, total_years)
