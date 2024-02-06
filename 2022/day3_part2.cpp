@@ -2,8 +2,8 @@
 #include <fstream>
 #include <iostream>
 #include <iterator>
-#include <string>
 #include <set>
+#include <string>
 
 int calculate_value(char c) {
     // lowercase letters have a higher ASCII value than uppercase letters,
@@ -37,12 +37,11 @@ int main() {
     std::string line2;
     std::string line3;
 
-    while (std::getline(input, line1) && std::getline(input, line2) &&
-           std::getline(input, line3)) {
+    while (std::getline(input, line1) && std::getline(input, line2) && std::getline(input, line3)) {
         std::set<char> rucksack1{line1.begin(), line1.end()};
         std::set<char> rucksack2{line2.begin(), line2.end()};
         std::set<char> rucksack3{line3.begin(), line3.end()};
-        
+
         // `common1` stores the list of common items between `rucksack1` and
         // `rucksack2`
         std::set<char> common1;
@@ -50,15 +49,11 @@ int main() {
         // by comparing `common1` and `rucksack3`.
         std::set<char> common2;
 
-        std::set_intersection(rucksack1.begin(), rucksack1.end(),
-                              rucksack2.begin(), rucksack2.end(),
-                              std::inserter(common1, common1.begin())
-                             );
+        std::set_intersection(rucksack1.begin(), rucksack1.end(), rucksack2.begin(), rucksack2.end(),
+                              std::inserter(common1, common1.begin()));
 
-        std::set_intersection(common1.begin(), common1.end(),
-                              rucksack3.begin(), rucksack3.end(),
-                              std::inserter(common2, common2.begin())
-                             );
+        std::set_intersection(common1.begin(), common1.end(), rucksack3.begin(), rucksack3.end(),
+                              std::inserter(common2, common2.begin()));
 
         for (char c : common2) {
             total_priority += calculate_value(c);

@@ -2,8 +2,8 @@
 #include <fstream>
 #include <iostream>
 #include <iterator>
-#include <string>
 #include <set>
+#include <string>
 
 int calculate_value(char c) {
     // lowercase letters have a higher ASCII value than uppercase letters,
@@ -43,10 +43,8 @@ int main() {
         std::set<char> compartment2{second.begin(), second.end()};
         std::set<char> common;
 
-        std::set_intersection(compartment1.begin(), compartment1.end(),
-                              compartment2.begin(), compartment2.end(),
-                              std::inserter(common, common.begin())
-                             );
+        std::set_intersection(compartment1.begin(), compartment1.end(), compartment2.begin(), compartment2.end(),
+                              std::inserter(common, common.begin()));
 
         for (char c : common) {
             total_priority += calculate_value(c);

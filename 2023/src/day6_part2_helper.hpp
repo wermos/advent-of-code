@@ -1,7 +1,7 @@
 #pragma once
 
-#include <ranges>
 #include <cstdint>
+#include <ranges>
 
 int calculate_ways_impl(std::uint64_t t_max, std::uint64_t distance) {
     auto filter = [t_max, distance](std::uint64_t t) -> bool { return t * (t_max - t) >= distance; };

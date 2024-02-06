@@ -8,7 +8,7 @@ int calculate_points(char opponent_move, char outcome) {
      *  'A' is for Rock,
      *  'B' is for Paper, and
      *  'C' is for Scissors.
-     * 
+     *
      * Points values are as follows:
      *  - Rock — 1,
      *  - Paper — 2, and
@@ -18,7 +18,7 @@ int calculate_points(char opponent_move, char outcome) {
 
     if (outcome == 'X') {
         // I need to lose
-        points = 0; // 0 points for a loss
+        points = 0;  // 0 points for a loss
 
         if (opponent_move == 'A') {
             points += 3;
@@ -29,7 +29,7 @@ int calculate_points(char opponent_move, char outcome) {
         }
     } else if (outcome == 'Y') {
         // I need to draw
-        points = 3; // 0 points for a draw
+        points = 3;  // 0 points for a draw
 
         if (opponent_move == 'A') {
             points += 1;
@@ -40,7 +40,7 @@ int calculate_points(char opponent_move, char outcome) {
         }
     } else {
         // I need to win
-        points = 6; // 0 points for a win
+        points = 6;  // 0 points for a win
 
         if (opponent_move == 'A') {
             points += 2;
