@@ -28,7 +28,7 @@ In order to be able to easily see the progress that I have made so far, I added 
 ![Progress Bar to show how much progress has been made in the 2015 problems](https://progress-bar.dev/4/?title=2015)
 ![Progress Bar to show how much progress has been made in the 2016 problems](https://progress-bar.dev/0/?title=2016)
 ![Progress Bar to show how much progress has been made in the 2017 problems](https://progress-bar.dev/0/?title=2017)
-![Progress Bar to show how much progress has been made in the 2018 problems](https://progress-bar.dev/4/?title=2018)
+![Progress Bar to show how much progress has been made in the 2018 problems](https://progress-bar.dev/6/?title=2018)
 ![Progress Bar to show how much progress has been made in the 2019 problems](https://progress-bar.dev/0/?title=2019)
 ![Progress Bar to show how much progress has been made in the 2020 problems](https://progress-bar.dev/0/?title=2020)
 ![Progress Bar to show how much progress has been made in the 2021 problems](https://progress-bar.dev/0/?title=2021)
