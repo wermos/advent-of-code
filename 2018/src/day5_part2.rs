@@ -44,7 +44,8 @@ fn main() {
     let s: Vec<char> = simplify(input.chars().collect());
 
     let ascii_lowercase = 'a'..='z';
-    let mut lengths = [0; 26];
+    let default = s.len();
+    let mut lengths = [default; 26];
 
     for ch in ascii_lowercase {
         let mut s = s.clone();
@@ -53,8 +54,6 @@ fn main() {
             s.retain(|&c| c != ch && c != ch.to_ascii_uppercase());
 
             lengths[ch as usize - 'a' as usize] = simplify(s).len();
-        } else {
-            lengths[ch as usize - 'a' as usize] = s.len();
         }
     }
 
