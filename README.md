@@ -32,7 +32,7 @@ In order to be able to easily see the progress that I have made so far, I added 
 ![Progress Bar to show how much progress has been made in the 2019 problems](https://progress-bar.dev/0/?title=2019)
 ![Progress Bar to show how much progress has been made in the 2020 problems](https://progress-bar.dev/0/?title=2020)
 ![Progress Bar to show how much progress has been made in the 2021 problems](https://progress-bar.dev/0/?title=2021)
-![Progress Bar to show how much progress has been made in the 2022 problems](https://progress-bar.dev/16/?title=2022)
+![Progress Bar to show how much progress has been made in the 2022 problems](https://progress-bar.dev/20/?title=2022)
 ![Progress Bar to show how much progress has been made in the 2023 problems](https://progress-bar.dev/22/?title=2023)
 
 ## Repository Structure
