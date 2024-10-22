@@ -36,3 +36,23 @@ path = "src/day5_part1.rs"
 [[bin]]
 name = "day5_part2"
 path = "src/day5_part2.rs"
+
+[[bin]]
+name = "day8_part1"
+path = "src/day8_part1.rs"
+
+[[bin]]
+name = "day16_part1"
+path = "src/day16_part1.rs"
+
+[lib]
+name = "common"
+path = "src/commonalities/common.rs"
+
+[[bin]]
+name = "day19_part1"
+path = "src/day19_part1.rs"
+
+[[bin]]
+name = "day19_part2"
+path = "src/day19_part2.rs"
