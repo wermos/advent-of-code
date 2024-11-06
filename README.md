@@ -107,6 +107,23 @@ advent-of-code/
 
 There are many holes, and entire years are currently missing, but those will (hopefully) be filled in over time 🤞
 
+## Year to Language Mapping
+
+| Year | Programming Language         |
+|------|------------------------------|
+| 2015 | <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java" height="16" style="vertical-align: text-bottom;"/> Java |
+| 2016 | ???                          |
+| 2017 | ???                          |
+| 2018 | <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg" alt="Rust" height="16" style="vertical-align: text-bottom;"/> Rust |
+| 2019 | ???                          |
+| 2020 | ???                          |
+| 2021 | ???                          |
+| 2022 | <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" height="16" style="vertical-align: text-bottom;"/> C++ |
+| 2023 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" height="16" style="vertical-align: text-bottom;"/> Python |
+| 2024 | TBA                          |
+
+The years with "???" means they have not been decided yet, and no progress has been made in those years yet. "TBA" means "To Be Announced", and it will be announced when the Advent of Code for 2024 starts.
+
 ## Language Requirements
 
 Since there are multiple languages used in the repository, it makes sense to talk about the version(s) with which the code has been tested, and the version(s) with which the code was run.
