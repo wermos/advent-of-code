@@ -61,13 +61,13 @@ def update_readme_with_progress(readme_path, year_progress, overall_progress):
     with open(readme_path, 'r') as file:
         readme_content = file.read()
 
-    overall_pattern = re.compile(r'!\[Progress Bar to show how much progress has been made\]\(https://progress-bar.dev/\d+/\?title=Progress\)')
-    overall_content = f"![Progress Bar to show how much progress has been made](https://progress-bar.dev/{overall_progress}/?title=Progress)"
+    overall_pattern = re.compile(r'!\[Progress Bar to show how much progress has been made\]\(https://progress-bar.xyz/\d+/\?title=Progress\)')
+    overall_content = f"![Progress Bar to show how much progress has been made](https://progress-bar.xyz/{overall_progress}/?title=Progress)"
     readme_content = overall_pattern.sub(overall_content, readme_content)
 
     for year, progress in year_progress.items():
-        year_pattern = re.compile(fr'!\[Progress Bar to show how much progress has been made in the {year} problems\]\(https://progress-bar.dev/\d+/\?title={year}\)')
-        year_content = f"![Progress Bar to show how much progress has been made in the {year} problems](https://progress-bar.dev/{progress}/?title={year})"
+        year_pattern = re.compile(fr'!\[Progress Bar to show how much progress has been made in the {year} problems\]\(https://progress-bar.xyz/\d+/\?title={year}\)')
+        year_content = f"![Progress Bar to show how much progress has been made in the {year} problems](https://progress-bar.xyz/{progress}/?title={year})"
         readme_content = year_pattern.sub(year_content, readme_content)
 
     with open(readme_path, 'w') as file:
