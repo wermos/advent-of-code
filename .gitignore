@@ -130,3 +130,5 @@ _deps
 a.out
 
 2023/modules/
+
+*/target/

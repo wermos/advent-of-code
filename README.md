@@ -30,7 +30,7 @@ Here is the year-to-language mapping in an tabular form:
 | 2021 | ???                          |
 | 2022 | <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" height="18" style="vertical-align: text-bottom;"/> C++ |
 | 2023 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" height="18" style="vertical-align: text-bottom;"/> Python |
-| 2024 | TBA                          |
+| 2024 | <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg" alt="Rust" height="18" style="vertical-align: text-bottom;"/> Rust |
 
 The years with "???" means they have not been decided yet, and no progress has been made in those years yet. "TBA" means "To Be Announced", and it will be announced when the Advent of Code for 2024 starts.
 
