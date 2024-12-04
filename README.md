@@ -40,7 +40,7 @@ In order to be able to easily see the progress that I have made so far, I added 
 
 #### Overall
 
-![Progress Bar to show how much progress has been made](https://progress-bar.xyz/12/?title=Progress)
+![Progress Bar to show how much progress has been made](https://progress-bar.xyz/13/?title=Progress)
 
 #### By Year
 
