@@ -27,24 +27,18 @@ fn main() {
 
     for m in matches {
         match m.as_str() {
-            "do()" => {
-                active = true;
-            },
-            "don't()" => {
-                active = false;
-            }
-            _ => {
-                // that means we matched on a `mul`
-                if active {
-                    // run the regex match function again, but this time we capture the extra,
-                    // necessary info, in capture groups
+            "do()" => active = true,
+            "don't()" => active = false,
+            // that means we matched on a `mul`
+            _ => if active {
+                // run the regex match function again, but this time we capture the extra,
+                // necessary info, in capture groups
 
-                    let m = mul_re.captures_at(input, m.start()).unwrap();
-                    let arg1 = m["arg1"].parse::<i64>().unwrap();
-                    let arg2 = m["arg2"].parse::<i64>().unwrap();
+                let m = mul_re.captures_at(input, m.start()).unwrap();
+                let arg1 = m["arg1"].parse::<i64>().unwrap();
+                let arg2 = m["arg2"].parse::<i64>().unwrap();
 
-                    sum += arg1 * arg2;
-                }
+                sum += arg1 * arg2;
             },
         }
     }
