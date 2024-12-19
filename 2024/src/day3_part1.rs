@@ -5,7 +5,7 @@ fn main() {
     let filename;
 
     if cfg!(debug_assertions) {
-        filename = "inputs/day3-test.txt";
+        filename = "inputs/day3-part1-test.txt";
     } else {
         filename = "inputs/day3.txt";
     }
