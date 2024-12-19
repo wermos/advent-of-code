@@ -108,10 +108,7 @@ impl CPU {
     pub fn execute(&mut self, program: Vec<(usize, usize)>) {
         while self.ip < program.len() {
             // while ip is pointing to a valid instruction
-
             let (instr, operand) = program[self.ip];
-            // println!("Instruction: {}, Operand: {}\t Registers: {:?}", instr, operand, self.registers);
-
             match instr {
                 0 => {
                     self.adv(operand);
@@ -144,8 +141,9 @@ impl CPU {
             }
 
             if instr != 3 {
+				// opcode of 3 is the jump instruction, and the jump instruction
+				// doesn't need the IP increment.
                 self.incr_ip();
-                // jump instruction doesn't need the IP increment
             }
         }
         println!("{}", self.output);
@@ -166,15 +164,15 @@ fn main() {
     let mut it = input.lines();
 
     let a = it.next().unwrap()
-                     .split(" ")
+                     .split_whitespace()
                      .last().unwrap()
                      .parse::<usize>().unwrap();
     let b = it.next().unwrap()
-                     .split(" ")
+                     .split_whitespace()
                      .last().unwrap()
                      .parse::<usize>().unwrap();
     let c = it.next().unwrap()
-                     .split(" ")
+                     .split_whitespace()
                      .last().unwrap()
                      .parse::<usize>().unwrap();
 
@@ -192,9 +190,6 @@ fn main() {
             (slice[0].parse().unwrap(), slice[1].parse().unwrap())
         })
         .collect();
-
-    // println!("Program: {program_str}");
-    // println!("{program:?}");
 
     cpu.execute(program);
 }
