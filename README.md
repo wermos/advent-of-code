@@ -53,6 +53,7 @@ In order to be able to easily see the progress that I have made so far, I added 
 ![Progress Bar to show how much progress has been made in the 2021 problems](https://progress-bar.xyz/0/?title=2021)
 ![Progress Bar to show how much progress has been made in the 2022 problems](https://progress-bar.xyz/20/?title=2022)
 ![Progress Bar to show how much progress has been made in the 2023 problems](https://progress-bar.xyz/22/?title=2023)
+![Progress Bar to show how much progress has been made in the 2024 problems](https://progress-bar.xyz/0/?title=2024)
 
 ## Repository Structure
 

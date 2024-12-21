@@ -108,7 +108,7 @@ def main():
     year_progress = count_files_in_years(root_directory, valid_extensions, dry_run=args.dry_run)
     total_years = len(year_progress)
 
-    target_directories = ['2022', '2023/src']
+    target_directories = ['2022', '2023/src', '2024/src']
     formatted_files = run_clang_format(root_directory, ['.cpp', '.hpp'], target_directories, dry_run=args.dry_run)
     commit_formatted_files(formatted_files, r"Formatted the files using \`clang-format\`.", dry_run=args.dry_run)
 
