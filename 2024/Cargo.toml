@@ -26,8 +26,16 @@ name = "day3_part1"
 path = "src/day3_part1.rs"
 
 [[bin]]
+name = "day3_part1_bench"
+path = "src/day3_part1_bench.rs"
+
+[[bin]]
 name = "day3_part2"
 path = "src/day3_part2.rs"
+
+[[bin]]
+name = "day3_part2_bench"
+path = "src/day3_part2_bench.rs"
 
 [[bin]]
 name = "day7_part1"
