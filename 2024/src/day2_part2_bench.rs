@@ -1,3 +1,9 @@
+#![feature(test)]
+
+extern crate test;
+
+use test::Bencher;
+
 use std::fs;
 
 fn convert(line: &str) -> Vec<i32> {
@@ -51,35 +57,64 @@ fn is_safe(list: &[i32]) -> bool {
     true
 }
 
-fn main() {
-    let filename;
+#[bench]
+fn two_vecs_version(b: &mut Bencher) {
+    b.iter(|| {
+        let filename = "inputs/day2.txt";
 
-    if cfg!(debug_assertions) {
-        filename = "inputs/day2-test.txt";
-    } else {
-        filename = "inputs/day2.txt";
-    }
+        let input = fs::read_to_string(filename).expect("Something went wrong reading the file");
 
-    let input = fs::read_to_string(filename).expect("Something went wrong reading the file");
-
-    let mut num_safe_lines = 0;
+    let mut _num_safe_lines = 0;
 
     for line in input.lines() {
         let list = convert(line);
         if is_safe(&list) {
-            num_safe_lines += 1;
+            _num_safe_lines += 1;
         } else {
             for i in 0..list.len() {
+                let mut tail = Vec::from(&list[i+1..]);
                 let mut small_list = Vec::from(&list[..i]);
-                small_list.extend_from_slice(&list[i+1..]);
+                
+                small_list.append(&mut tail);
                 
                 if is_safe(&small_list) {
-                    num_safe_lines += 1;
+                    _num_safe_lines += 1;
                     break;
                 }
             }
         }
     }
+    });
+}
 
-    println!("{num_safe_lines}");
+#[bench]
+fn vec_and_slice_version(b: &mut Bencher) {
+    b.iter(|| {
+        let filename = "inputs/day2-test.txt";
+
+        let input = fs::read_to_string(filename).expect("Something went wrong reading the file");
+
+        let mut _num_safe_lines = 0;
+
+        for line in input.lines() {
+            let list = convert(line);
+            if is_safe(&list) {
+                _num_safe_lines += 1;
+            } else {
+                for i in 0..list.len() {
+                    let mut small_list = Vec::from(&list[..i]);
+                    small_list.extend_from_slice(&list[i+1..]);
+                    
+                    if is_safe(&small_list) {
+                        _num_safe_lines += 1;
+                        break;
+                    }
+                }
+            }
+        }
+    });
+}
+
+fn main() {
+    println!("Run `cargo bench` to run the benchmarks.")
 }
