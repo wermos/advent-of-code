@@ -9,7 +9,7 @@ In its final form, I want the repo to store the complete solution to every Adven
 Apart from that, another goal is to learn things while doing these problems. One way I've ensured that this goal will be met, to some extent at least, is by forcing myself to do each year in a different programming language. So far, the languages I've decided are
 
 - 2015 will be in Java.
-- 2018 will be in Rust. (Day 1 will have to be redone.)
+- 2018 will be in Rust. (Day 1 had to be redone because the original inputs were for a different AoC account which has since been lost to time.)
 - 2022 will be in C++.
 - 2023 will be in Python.
 
@@ -31,8 +31,9 @@ Here is the year-to-language mapping in an tabular form:
 | 2022 | <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" height="18" style="vertical-align: text-bottom;"/> C++ |
 | 2023 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" height="18" style="vertical-align: text-bottom;"/> Python |
 | 2024 | <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg" alt="Rust" height="18" style="vertical-align: text-bottom;"/> Rust |
+| 2025 | TBA |
 
-The years with "???" means they have not been decided yet, and no progress has been made in those years yet. "TBA" means "To Be Announced", and it will be announced when the Advent of Code for 2024 starts.
+The years with "???" means they have not been decided yet, and no progress has been made in those years yet. "TBA" means "To Be Announced", and it will be announced when the Advent of Code for that year starts.
 
 ### Progress
 
