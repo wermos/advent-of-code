@@ -6,12 +6,10 @@ fn convert(line: &str) -> Vec<i32> {
 
 fn is_safe(list: &[i32]) -> bool {
     // we can safely assume that `list` has at least 2 elements.
-    let increasing;
-
-    if list[1] > list[0] {
-        increasing = true;
+    let increasing = if list[1] > list[0] {
+        true
     } else {
-        increasing = false;
+        false
     };
 
     if increasing {
@@ -19,13 +17,9 @@ fn is_safe(list: &[i32]) -> bool {
             let diff = list[i] - list[i - 1];
     
             if diff <= 0 {
-                // in this case, either the list had the same number twice in a
-                // row, or started decreasing all of a sudden
                 return false;
             }
     
-            // we know that `diff` must be at least 1 by virtue of there being
-            // no integer between 0 and 1.
             if diff > 3 {
                 return false;
             }
@@ -36,13 +30,9 @@ fn is_safe(list: &[i32]) -> bool {
             let diff = list[i - 1] - list[i];
     
             if diff <= 0 {
-                // in this case, either the list had the same number twice in a
-                // row, or started increasing all of a sudden
                 return false;
             }
-    
-            // we know that `diff` must be at least 1 by virtue of there being
-            // no integer between 0 and 1.
+
             if diff > 3 {
                 return false;
             }
@@ -52,13 +42,11 @@ fn is_safe(list: &[i32]) -> bool {
 }
 
 fn main() {
-    let filename;
-
-    if cfg!(debug_assertions) {
-        filename = "inputs/day2-test.txt";
+    let filename = if cfg!(debug_assertions) {
+        "inputs/day2-test.txt"
     } else {
-        filename = "inputs/day2.txt";
-    }
+        "inputs/day2.txt"
+    };
 
     let input = fs::read_to_string(filename).expect("Something went wrong reading the file");
 
@@ -67,7 +55,6 @@ fn main() {
     for line in input.lines() {
         if is_safe(&convert(line)) {
             num_safe_lines += 1;
-            // println!("{:?}", line);
         }
     }
 
