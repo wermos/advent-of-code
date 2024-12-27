@@ -54,7 +54,7 @@ In order to be able to easily see the progress that I have made so far, I added 
 ![Progress Bar to show how much progress has been made in the 2021 problems](https://progress-bar.xyz/0/?title=2021)
 ![Progress Bar to show how much progress has been made in the 2022 problems](https://progress-bar.xyz/20/?title=2022)
 ![Progress Bar to show how much progress has been made in the 2023 problems](https://progress-bar.xyz/22/?title=2023)
-![Progress Bar to show how much progress has been made in the 2024 problems](https://progress-bar.xyz/16/?title=2024)
+![Progress Bar to show how much progress has been made in the 2024 problems](https://progress-bar.xyz/18/?title=2024)
 
 ## Repository Structure
 
@@ -139,6 +139,10 @@ Most of the Python solutions should work even with an older Python version like 
 ### Java
 
 [At the time of writing this subsection](https://github.com/wermos/advent-of-code/tree/c0c594b6020cb0262f2964596482c926b130938b), the only Java code in the repository is the Day 1 Parts 1 and 2 solution for 2015. I ran the code using [Java 22 Early Access](https://jdk.java.net/22/). That being said, it _should_ work on any Java version 8 onwards.
+
+### Rust
+
+As such, there are no real MSRV
 
 ### C++
 
